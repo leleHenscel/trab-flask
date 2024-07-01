@@ -1,0 +1,32 @@
+<!doctype html>
+
+<head>
+    <title>{% block title %}{% endblock %} - Sistema CadMusic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>    
+    <!-- Navbar  --> 
+<header>
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="{{ url_for("home") }}" class="nav-link">Página Inicial</a></li>
+            <li class="nav-item"><a href="{{ url_for("about") }}" class="nav-link">Sobre o Sistema
+            </a></li>
+            <li class="nav-item"><a href="{{ url_for("listar_musicas") }}" class="nav-link">Listagem
+            </a></li>
+        </ul>
+    </nav>
+    </header>
+    <!-- Navbar  --> 
+    <br>
+    <br>
+
+    <section class="content">
+        <header> {% block header %}{% endblock %} </header>
+
+        {% block content %}{% endblock %}
+    </section>
+
+</body>

@@ -1,0 +1,26 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+<h1>{% block title %}Cadastrar músicas{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<form action="adicionar_musica">
+    <p>
+       Nome: <input type="text" name="nome" value="nome da música">
+    </p>
+    <p>
+        Artista: <input type="text" name="artista" value="Artista que a compôs">
+    </p>
+    <p>
+        Duracao: <input type="text" name="duracao" value="Duração da música">
+    </p>
+    <p>
+        Genero: <input type="text" name="genero" value="Genero da música">
+    </p>
+
+    <button>Cadastrar</button>
+</form>
+
+{% endblock %}
